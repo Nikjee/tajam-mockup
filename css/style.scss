@@ -88,6 +88,14 @@ body {
     }
   }
 }
+.btn {
+  display: inline-block;
+  font-size: 16px;
+  font-family: 'Hammersmith One', sans-serif;
+  color: #00e0d0;
+  border: 1px solid #00e0d0;
+  padding: 10px 17px;
+}
 //===================================================================================================================================
 .headerblock {
   position: relative;
@@ -152,13 +160,7 @@ body {
       font-weight: 400;
     }
     &-button {
-      display: inline-block;
-      font-size: 16px;
-      font-family: 'Hammersmith One', sans-serif;
       margin: 65px 0px 0px 0px;
-      color: #00e0d0;
-      border: 1px solid #00e0d0;
-      padding: 10px 17px;
     }
   }
 }
@@ -205,6 +207,67 @@ body {
     }
     &:last-child {
       margin: 0px 0px 0px 0px;
+    }
+  }
+}
+
+.storyblock {
+  padding: 68px 0px 70px 0px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &__image {
+  }
+
+  &__content {
+  }
+
+  &__title {
+    font-size: 22px;
+    font-family: 'PlayfairDisplay', sans-serif;
+    color: rgb(65, 61, 75);
+    font-weight: bold;
+    line-height: 1.2;
+    text-align: left;
+    padding: 0px 0px 29px 0px;
+  }
+
+  &__subtitle {
+    max-width: 539px;
+    margin: 0 auto;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    color: rgba(65, 61, 75, 0.749);
+    line-height: 1.571;
+    padding: 0px 0px 34px 0px;
+  }
+
+  &__button {
+  }
+}
+
+.watchblock {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: url('../assets/watch/bg.png') center / cover no-repeat;
+  padding: 200px 0px 200px 0px;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    img {
+      padding: 0px 0px 35px 0px;
+    }
+    span {
+      font-size: 16px;
+      font-family: 'Roboto';
+      color: white;
+      font-weight: bold;
+      line-height: 1.2;
+      text-align: center;
     }
   }
 }
