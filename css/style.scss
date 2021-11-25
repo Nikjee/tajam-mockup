@@ -67,7 +67,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 180px 0px 0px 0px;
+    padding: 130px 0px 0px 0px;
     li {
       list-style: none;
       margin: 0px 3px;
@@ -96,11 +96,22 @@ body {
   border: 1px solid #00e0d0;
   padding: 10px 17px;
 }
+
+._ibg {
+  position: relative;
+  img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+  }
+}
 //===================================================================================================================================
 .headerblock {
   position: relative;
-  width: 100%;
-  height: 100%;
+  padding: 0px 0px 70px 0px;
   &__body {
     display: flex;
     flex-direction: column;
@@ -109,26 +120,22 @@ body {
 
   &__image {
     position: absolute;
+    width: 100%;
+    height: 100%;
     top: 0;
     left: 0;
-    width: 100%;
     z-index: -1;
-    img {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-    }
   }
 }
 .header {
   &__nav {
   }
-
+  &__content-slider {
+    padding: 180px 0px 0px 0px;
+  }
   &__content {
     text-align: center;
     color: white;
-    padding: 180px 0px 0px 0px;
     &-title {
       position: relative;
       font-size: 32px;
@@ -272,4 +279,163 @@ body {
   }
 }
 
+.expertise {
+  padding: 70px 0px 68px 0px;
+  &__titleblock {
+  }
+
+  &__items {
+    display: grid;
+    grid-template: repeat(2, 1fr) / repeat(3, 1fr);
+    column-gap: 1px;
+    row-gap: 1px;
+    background-color: #ebebeb;
+  }
+
+  &__item {
+  }
+}
+.title {
+  text-align: center;
+  padding: 0px 0px 38px 0px;
+  &__text {
+    font-size: 22px;
+    font-family: 'Playfair Display';
+    color: rgb(65, 61, 75);
+    font-weight: bold;
+    line-height: 1.2;
+    padding: 0px 0px 10px 0px;
+  }
+
+  &__subtitle {
+    font-size: 14px;
+    font-family: 'Playfair Display';
+    color: rgba(47, 45, 53, 0.749);
+    line-height: 1.2;
+    position: relative;
+    padding: 0px 0px 18px 0px;
+    &::after {
+      content: '';
+      position: absolute;
+      background-color: rgb(65, 61, 75);
+      width: 50px;
+      height: 2px;
+      bottom: 0;
+      left: 50%;
+      margin: 0px 0px 0px -25px;
+    }
+  }
+}
+.item {
+  text-align: center;
+  background-color: #fff;
+  padding: 15px 15px 15px 15px;
+  &__icon {
+    padding: 0px 0px 35px 0px;
+  }
+
+  &__title {
+    padding: 0px 0px 25px 0px;
+    font-size: 14px;
+    font-family: 'Roboto';
+    color: rgb(65, 61, 75);
+    line-height: 1.2;
+    font-weight: 800;
+  }
+
+  &__subtitle {
+    font-size: 14px;
+    font-family: 'Roboto';
+    color: rgba(51, 51, 51, 0.749);
+    line-height: 1.571;
+    max-width: 254px;
+    margin: 0px auto;
+  }
+}
+
+.team {
+  position: relative;
+  padding: 70px 0px 70px 0px;
+  text-align: center;
+  .title {
+    &__text {
+      color: #fff;
+    }
+
+    &__subtitle {
+      color: #fff;
+      &::after {
+        background-color: #655c80;
+      }
+    }
+  }
+
+  &_bg-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+
+  &__content {
+  }
+
+  &__titleblock {
+  }
+
+  &__people {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 0px 70px 0px;
+  }
+
+  &__text {
+    padding: 0px 0px 25px 0px;
+    font-size: 14px;
+    color: rgb(243, 243, 243);
+    line-height: 1.2;
+    font-weight: 100;
+  }
+
+  &__button {
+  }
+}
+
+.people-item {
+  &__content {
+    margin: 0px 20px 0px 0px;
+    &:last-child {
+      margin: 0px 0px 0px 0px;
+    }
+    text-align: center;
+  }
+  &__about {
+    text-align: center;
+    border-width: 1px;
+    border-color: rgba(225, 225, 225, 0.5);
+    border-style: solid;
+    padding: 22px 0px;
+  }
+  &__image {
+    width: 220px;
+    height: 230px;
+    background-color: #f3f3f3;
+  }
+
+  &__name {
+    color: #fff;
+    font-size: 14px;
+    font-family: $fontFamily;
+    line-height: 1.2;
+    font-weight: 800;
+    padding: 0px 0px 12px 0px;
+  }
+
+  &__job {
+    color: #fff;
+  }
+}
 //</ОСНОВНОЙ БЛОК>====================================================================================================
