@@ -438,4 +438,73 @@ body {
     color: #fff;
   }
 }
+
+.works {
+  text-align: center;
+  padding: 70px 0px 70px 0px;
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 0px 70px 0px;
+  }
+
+  &__text {
+    font-size: 22px;
+    font-family: 'Playfair Display';
+    color: rgb(65, 61, 75);
+    font-weight: bold;
+    line-height: 1.2;
+  }
+
+  &__dribble {
+    font-size: 14px;
+    font-family: 'Roboto';
+    color: rgb(65, 61, 75);
+    line-height: 1.2;
+  }
+
+  &__items {
+    padding: 0px 0px 70px 0px;
+    img {
+      object-fit: cover;
+      width: 100%;
+    }
+  }
+}
+
+.quote {
+  position: relative;
+
+  &__slider {
+  }
+
+  &__icon {
+  }
+
+  &__text {
+  }
+
+  &__name {
+  }
+
+  &__job {
+  }
+
+  &__img {
+  }
+
+  &__bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+}
+.quote-slider {
+  &__item {
+  }
+}
 //</ОСНОВНОЙ БЛОК>====================================================================================================
