@@ -3,6 +3,13 @@ $(document).ready(function () {
     dots: true,
     arrows: false,
   })
+
+  $('.quote-slider').slick({
+    arrows: true,
+    slidesToShow: 1,
+    dots: true,
+    fade: true,
+  })
 })
 
 function ibg() {
