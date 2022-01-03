@@ -1,5 +1,5 @@
 //<Шрифт по умолчанию>==========================================================================================
-$fontFamily: 'Roboto';
+$fontFamily: 'Roboto', sans-serif;
 //</Шрифт по умолчанию>==========================================================================================
 
 //<ПЕРЕМЕННЫЕ>===========================================================================================================
@@ -17,6 +17,7 @@ $md4: 479.98;
 body {
   color: #000;
   font-size: 14px;
+  font-family: 'Roboto', sans-serif;
   &._lock {
     overflow: hidden;
   }
@@ -398,7 +399,6 @@ body {
     font-size: 14px;
     color: rgb(243, 243, 243);
     line-height: 1.2;
-    font-weight: 100;
   }
 
   &__button {
@@ -668,9 +668,11 @@ body {
 }
 
 .block-clients {
+  min-width: 360px;
+  flex-basis: 50%;
   &__title {
     font-size: 22px;
-    font-family: 'Playfair Display';
+    font-family: 'Playfair Display', sans-serif;
     color: rgb(65, 61, 75);
     font-weight: bold;
     line-height: 1.2;
@@ -678,15 +680,170 @@ body {
   }
 
   &__logos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-row-gap: 50px;
+    grid-column-gap: 80px;
+    justify-items: center;
+    img {
+      text-align: center;
+    }
+  }
+}
+
+/*footer*/
+.footer {
+  background-image: url('../assets/footer/footer.webp');
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 70px;
+  padding-bottom: 70px;
+
+  &__logo-text {
+    margin-left: 11px;
+    font-size: 30px;
+    color: #36b3cd;
+  }
+
+  &__main {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
-    img {
-      width: 50%;
-      max-width: 160px;
-      height: auto;
-      margin-bottom: 40px;
+    flex-basis: 100%;
+    align-items: flex-start;
+    margin-bottom: 47px;
+  }
+
+  &__about {
+    max-width: 290px;
+    flex-basis: 33.33%;
+
+    &-text {
+      font-size: 14px;
+      line-height: 26px;
+      font-weight: 400;
+      word-spacing: 0.7px;
+      margin: 0;
+      margin-top: 20px;
+      color: #fff;
     }
+  }
+
+  &__address {
+    max-width: 290px;
+    flex-basis: 33.33%;
+
+    &-text {
+      font-size: 14px;
+      line-height: 26px;
+      font-weight: 400;
+      word-spacing: 1px;
+      margin: 0;
+      color: #fff;
+    }
+
+    &-item {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 13px;
+    }
+
+    &-img {
+      margin-right: 15px;
+    }
+  }
+
+  &__social {
+    max-width: 290px;
+    flex-basis: 33.33%;
+  }
+
+  &__title {
+    font-size: 15px;
+    text-transform: uppercase;
+    line-height: 26px;
+    margin-top: 15px;
+    font-weight: 800;
+    letter-spacing: 0.7px;
+    margin-bottom: 25px;
+    color: #fff;
+  }
+
+  &__phone-text {
+    text-decoration: none;
+    color: #eaeaec;
+    font-size: 14px;
+    line-height: 26px;
+    font-weight: 400;
+    word-spacing: 0.7px;
+    margin: 0;
+  }
+  &__social {
+    &-item {
+      margin-right: 5px;
+    }
+
+    &-input {
+      display: flex;
+      justify-items: center;
+    }
+  }
+
+  &__subscribe {
+    &-input {
+      background: none;
+      border: none;
+      margin: 0;
+      padding: 0;
+      margin-right: 5px;
+      border: 1px solid #9e97af;
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 26px;
+      padding: 9px 20px;
+      margin-bottom: 25px;
+      letter-spacing: 0.6px;
+    }
+
+    &-btn {
+      border: none;
+      background: none;
+      text-decoration: none;
+      background-color: #a19ab3;
+      opacity: 0.3;
+      margin: 0;
+      padding: 0;
+      background-image: url('../assets/footer/paper122.png');
+      background-repeat: no-repeat;
+      background-position: center center;
+      height: 45px;
+      width: 70px;
+    }
+  }
+
+  &__links {
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 0.4px;
+    display: block;
+    float: left;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: #eaeaec;
+    margin-right: 30px;
+  }
+
+  &__copyright {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 0.5px;
+    display: block;
+    float: right;
+    color: #fff;
   }
 }
 
