@@ -336,57 +336,34 @@
       </div>
       <div class="feedback">
         <div class="feedback__block _container">
-          <div class="feedback__form-block">
-            <div class="form-feedback__title">GIVE US A GOOD NEWS</div>
-            <form action="" class="feedback__form form-feedback">
-              <div class="form-feedback__name">
-                <input
-                  placeholder="Name"
-                  autocomplete="off"
-                  type="text"
-                  name="form[]"
-                  data-error="Ошибка"
-                  data-value=""
-                  class="form-feedback__name"
-                />
-              </div>
-              <div class="form-feedback__email">
-                <input
-                  placeholder="Email"
-                  autocomplete="off"
-                  type="text"
-                  name="form[]"
-                  data-error="Ошибка"
-                  data-value=""
-                  class="form-feedback__email"
-                />
-              </div>
-              <div class="form-feedback__subject">
-                <input
-                  placeholder="Subject"
-                  autocomplete="off"
-                  type="text"
-                  name="form[]"
-                  data-error="Ошибка"
-                  data-value=""
-                  class="form-feedback__subject"
-                />
-              </div>
-              <div class="form-feedback__message">
-                <textarea
-                  placeholder="Message"
-                  autocomplete="off"
-                  name="form[]"
-                  data-value=""
-                  data-error="Ошибка"
-                  class="form-feedback__message"
-                ></textarea>
-              </div>
-              <button type="submit" class="form-feedback__button btn">
-                SUBMIT
-              </button>
-            </form>
-          </div>
+          <form action="" class="feedback__form">
+            <div class="feedback__form-title">GIVE US A GOOD NEWS</div>
+            <input
+              type="text"
+              class="feedback__form-input"
+              name="user_name"
+              placeholder="Name"
+            />
+            <input
+              type="email"
+              class="feedback__form-input"
+              name="user_email"
+              placeholder="Email"
+            />
+            <input
+              type="text"
+              class="feedback__form-input"
+              name="subject"
+              placeholder="Subject"
+            />
+            <input
+              type="text"
+              class="feedback__form-input feedback__form-message"
+              name="message"
+              placeholder="Your Message"
+            />
+            <button type="submit" class="feedback__form-btn btn">Submit</button>
+          </form>
           <div class="feedback__block-clients block-clients">
             <div class="block-clients__title">OUR HAPPY CLIENT</div>
             <div class="block-clients__logos">

@@ -119,13 +119,13 @@ body._lock {
 
 @media (max-width: 972px) {
   ._container {
-    max-width: 970px;
+    max-width: 950px;
   }
 }
 
 @media (max-width: 991.98px) {
   ._container {
-    max-width: 750px;
+    max-width: 840px;
   }
 }
 
@@ -696,13 +696,13 @@ body._lock {
 }
 
 .quote__slider .slick-prev {
-  left: 760px;
+  right: 760px;
   bottom: 83px;
   background: url("../assets/quote/left.png") 0 0/100% no-repeat;
 }
 
 .quote__slider .slick-next {
-  right: 760px;
+  left: 760px;
   bottom: 83px;
   background: url("../assets/quote/right.png") 0 0/100% no-repeat;
 }
@@ -759,18 +759,28 @@ body._lock {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-.form-feedback input {
+.feedback__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+}
+
+.feedback__form input {
   border: 1px solid #e5e5e5;
-  padding: 20px 17px;
 }
 
-.form-feedback > div {
-  margin: 0px 0px 25px 0px;
-}
-
-.form-feedback__title {
+.feedback__form-title {
   font-size: 22px;
   font-family: 'Playfair Display';
   color: #413d4b;
@@ -779,33 +789,22 @@ body._lock {
   padding: 0px 0px 35px 0px;
 }
 
-.form-feedback__name {
-  width: 460px;
-  height: 45px;
+.feedback__form-input {
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  padding: 13px 20px;
+  margin-bottom: 21px;
 }
 
-.form-feedback__email {
-  width: 460px;
-  height: 45px;
+.feedback__form-message {
+  padding-bottom: 165px;
 }
 
-.form-feedback__subject {
-  width: 460px;
-  height: 45px;
-}
-
-.form-feedback__message {
-  width: 460px;
-  height: 200px;
-}
-
-.form-feedback__message textarea {
-  padding: 20px 17px;
-  border: 1px solid #e5e5e5;
-}
-
-.form-feedback__button {
+.feedback__form-btn {
   background-color: #fff;
+  text-align: center;
+  width: 120px;
 }
 
 .block-clients {
@@ -1005,4 +1004,13 @@ body._lock {
   float: right;
   color: #fff;
 }
-/*# sourceMappingURL=style.css.map */
+
+@media (max-width: 991.98px) {
+  .storyblock__content {
+    -ms-flex-preferred-size: 60%;
+        flex-basis: 60%;
+  }
+  .feedback .block-clients__logos {
+    grid-column-gap: 40px;
+  }
+}
