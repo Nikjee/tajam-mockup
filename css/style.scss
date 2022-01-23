@@ -7,8 +7,8 @@ $minWidth: 320px;
 $maxWidth: 1920;
 $maxWidthContainer: 960;
 $md1: $maxWidthContainer + 12;
-$md2: 991.98;
-$md3: 767.98;
+$md2: 910.98;
+$md3: 845.98;
 $md4: 479.98;
 //</ПЕРЕМЕННЫЕ>===========================================================================================================
 
@@ -41,12 +41,15 @@ body {
   max-width: $maxWidthContainer + px;
   margin: 0 auto;
   @media (max-width: $md1+px) {
-    max-width: 950px;
+    max-width: 900px;
   }
   @media (max-width: $md2+px) {
     max-width: 840px;
   }
   @media (max-width: $md3+px) {
+    max-width: 790px;
+  }
+  @media (max-width: $md4+px) {
     max-width: none;
     padding: 0 10px;
   }
@@ -389,7 +392,8 @@ body {
 
   &__people {
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
     align-items: center;
     padding: 0px 0px 70px 0px;
   }
@@ -407,7 +411,7 @@ body {
 
 .people-item {
   &__content {
-    margin: 0px 20px 0px 0px;
+    // margin: 0px 20px 0px 0px;
     &:last-child {
       margin: 0px 0px 0px 0px;
     }
@@ -467,10 +471,17 @@ body {
 
   &__items {
     padding: 0px 0px 70px 0px;
-    img {
-      object-fit: cover;
-      width: 100%;
-    }
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  &__item {
+    flex-grow: 1;
+    flex-basis: 0;
+    border: 1px solid gray;
+    width: 100%;
+    height: auto;
+    max-width: 300px;
   }
 }
 
@@ -479,6 +490,78 @@ body {
   padding: 70px 0px 70px 0px;
 
   &__slider {
+    &-arrows {
+      font-size: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    &-arrow {
+      width: 11px;
+      height: 21px;
+      &-left {
+        background: url('../assets/quote/left.png') 0 0 / 100% no-repeat;
+        margin: 0px 20px 0px 0px;
+      }
+      &-right {
+        background: url('../assets/quote/right.png') 0 0 / 100% no-repeat;
+        margin: 0px 0px 0px 20px;
+      }
+    }
+
+    &-dots {
+      .slick {
+        &-dots {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          li {
+            list-style: none;
+            margin: 0px 10px;
+            &:nth-child(1) {
+              button {
+                background: url('../assets/quote/5.png') 0 0 / 100% no-repeat;
+              }
+            }
+            &:nth-child(2) {
+              button {
+                background: url('../assets/quote/4.png') 0 0 / 100% no-repeat;
+              }
+            }
+            &:nth-child(3) {
+              button {
+                background: url('../assets/quote/3.png') 0 0 / 100% no-repeat;
+              }
+            }
+            &:nth-child(4) {
+              button {
+                background: url('../assets/quote/2.png') 0 0 / 100% no-repeat;
+              }
+            }
+            &:nth-child(5) {
+              button {
+                background: url('../assets/quote/1.png') 0 0 / 100% no-repeat;
+              }
+            }
+            &.slick-active {
+              transform: scale(1.2);
+            }
+          }
+          button {
+            width: 45px;
+            height: 45px;
+            font-size: 0;
+          }
+          &-active {
+            button {
+              width: 65px;
+              height: 65px;
+            }
+          }
+        }
+      }
+    }
+
     .slick {
       &-track {
         display: flex;
@@ -488,71 +571,6 @@ body {
       }
       &-list {
         overflow: hidden;
-      }
-      &-dots {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        li {
-          list-style: none;
-          margin: 0px 10px;
-          &:nth-child(1) {
-            button {
-              background: url('../assets/quote/5.png') 0 0 / 100% no-repeat;
-            }
-          }
-          &:nth-child(2) {
-            button {
-              background: url('../assets/quote/4.png') 0 0 / 100% no-repeat;
-            }
-          }
-          &:nth-child(3) {
-            button {
-              background: url('../assets/quote/3.png') 0 0 / 100% no-repeat;
-            }
-          }
-          &:nth-child(4) {
-            button {
-              background: url('../assets/quote/2.png') 0 0 / 100% no-repeat;
-            }
-          }
-          &:nth-child(5) {
-            button {
-              background: url('../assets/quote/1.png') 0 0 / 100% no-repeat;
-            }
-          }
-          &.slick-active {
-            transform: scale(1.2);
-          }
-        }
-        button {
-          width: 45px;
-          height: 45px;
-          font-size: 0;
-        }
-        &-active {
-          button {
-            width: 65px;
-            height: 65px;
-          }
-        }
-      }
-      &-arrow {
-        position: absolute;
-        font-size: 0;
-        z-index: 10;
-        width: 11px;
-        height: 21px;
-      }
-      &-prev {
-        right: 760px;
-        bottom: 83px;
-        background: url('../assets/quote/left.png') 0 0 / 100% no-repeat;
-      }
-      &-next {
-        left: 760px;
-        bottom: 83px;
-        background: url('../assets/quote/right.png') 0 0 / 100% no-repeat;
       }
     }
   }
@@ -605,7 +623,6 @@ body {
     text-align: center;
   }
 }
-
 .feedback {
   padding: 70px 0px 70px 0px;
   &__block {
@@ -654,54 +671,8 @@ body {
   }
 }
 
-// .form-feedback {
-//   input {
-//     border: 1px solid #e5e5e5;
-//     padding: 20px 17px;
-//   }
-//   & > div {
-//     margin: 0px 0px 25px 0px;
-//   }
-//   &__title {
-//     font-size: 22px;
-//     font-family: 'Playfair Display';
-//     color: rgb(65, 61, 75);
-//     font-weight: bold;
-//     line-height: 1.2;
-//     padding: 0px 0px 35px 0px;
-//   }
-
-//   &__name {
-//     width: 460px;
-//     height: 45px;
-//   }
-
-//   &__email {
-//     width: 460px;
-//     height: 45px;
-//   }
-
-//   &__subject {
-//     width: 460px;
-//     height: 45px;
-//   }
-
-//   &__message {
-//     width: 460px;
-//     height: 200px;
-//     textarea {
-//       padding: 20px 17px;
-//       border: 1px solid #e5e5e5;
-//     }
-//   }
-//   &__button {
-//     background-color: #fff;
-//   }
-// }
-
 .block-clients {
   min-width: 360px;
-  flex-basis: 50%;
   &__title {
     font-size: 22px;
     font-family: 'Playfair Display', sans-serif;
@@ -888,11 +859,75 @@ body {
     }
   }
 
+  .team {
+    .people-item {
+      justify-content: space-around;
+      align-items: center;
+
+      &__content {
+        margin-bottom: 20px;
+        &:last-child {
+          margin: 0px 0px 0px 0px;
+        }
+      }
+    }
+  }
+
   .feedback {
     .block-clients {
       &__logos {
         grid-column-gap: 40px;
       }
+    }
+  }
+}
+
+@media (max-width: $md3+px) {
+  .feedback {
+    &__block {
+      flex-direction: column;
+      align-items: center;
+    }
+    &__form {
+      max-width: 70%;
+      flex-basis: 70%;
+      width: 75%;
+      order: 1;
+      &-title {
+        text-align: center;
+      }
+      &-btn {
+        align-self: center;
+      }
+    }
+    .block-clients {
+      max-width: 70%;
+      width: 70%;
+      margin-bottom: 60px;
+      &__title {
+        text-align: center;
+      }
+      &__logos {
+        grid-row-gap: 25px;
+      }
+    }
+  }
+
+  .footer {
+    &__main {
+      flex-wrap: wrap;
+    }
+    &__about {
+      flex-basis: 47%;
+      max-width: 47%;
+    }
+    &__address {
+      flex-basis: 47%;
+      max-width: 47%;
+    }
+    &__social {
+      flex-basis: 47%;
+      max-width: 47%;
     }
   }
 }
