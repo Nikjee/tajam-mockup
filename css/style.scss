@@ -9,7 +9,7 @@ $maxWidthContainer: 960;
 $md1: $maxWidthContainer + 12;
 $md2: 910.98;
 $md3: 845.98;
-$md4: 479.98;
+$md4: 579.98;
 //</ПЕРЕМЕННЫЕ>===========================================================================================================
 
 //<ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>===============================================================================================
@@ -47,7 +47,7 @@ body {
     max-width: 840px;
   }
   @media (max-width: $md3+px) {
-    max-width: 790px;
+    max-width: 690px;
   }
   @media (max-width: $md4+px) {
     max-width: none;
@@ -467,6 +467,7 @@ body {
     font-family: 'Roboto';
     color: rgb(65, 61, 75);
     line-height: 1.2;
+    cursor: pointer;
   }
 
   &__items {
@@ -702,6 +703,11 @@ body {
   padding-top: 70px;
   padding-bottom: 70px;
 
+  &__logo {
+    display: flex;
+    align-items: center;
+  }
+
   &__logo-text {
     margin-left: 11px;
     font-size: 30px;
@@ -928,6 +934,170 @@ body {
     &__social {
       flex-basis: 47%;
       max-width: 47%;
+    }
+  }
+}
+
+@media (max-width: $md4+px) {
+  .headerblock {
+    padding: 0px 0px 30px 0px;
+    .nav {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      &__logo {
+        margin-bottom: 10px;
+      }
+      &__items {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      &__item {
+        margin: 0px 0px 10px 0px;
+        &:last-child {
+          margin: 0px 0px 0px 0px;
+        }
+      }
+    }
+    .header {
+      &__content-title {
+        font-size: 28px;
+      }
+      &__content-slider {
+        padding: 50px 0px 0px 0px;
+        .slick-dots {
+          padding: 20px 0px 0px 0px;
+        }
+      }
+    }
+  }
+  .storyblock {
+    padding: 30px 0px 30px 0px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    &__title {
+      text-align: center;
+    }
+    &__subtitle {
+      text-align: center;
+      font-size: 13px;
+    }
+    &__button {
+      margin: 0 auto;
+    }
+    &__content {
+      display: flex;
+      flex-direction: column;
+    }
+    &__image {
+      img {
+        width: 150px;
+      }
+    }
+  }
+  .watchblock {
+    padding: 50px 0px 50px 0px;
+  }
+  .expertise {
+    padding: 30px 0px 30px 0px;
+    &__items {
+      grid-template: none;
+    }
+  }
+  .team {
+    padding: 30px 0px 30px 0px;
+    &__people {
+      padding: 0px 0px 20px 0px;
+    }
+  }
+  .works {
+    padding: 30px 0px 30px 0px;
+    &__header {
+      flex-direction: column;
+      padding: 0px 0px 20px 0px;
+    }
+    &__text {
+      font-size: 18px;
+    }
+    &__dribble {
+      margin-top: 5px;
+      font-size: 12px;
+    }
+    &__items {
+      padding: 0px 0px 20px 0px;
+    }
+    &__item {
+      width: 50%;
+    }
+  }
+  .quote {
+    padding: 30px 0px 30px 0px;
+    &__slider-arrow {
+      margin: 0px 0px 0px 0px;
+    }
+  }
+  .feedback {
+    padding: 30px 0px 30px 0px;
+    .block-clients {
+      width: 100%;
+      max-width: 100%;
+      &__logos {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+  .footer {
+    padding: 30px 0px 30px 0px;
+    &__main {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    &__about {
+      text-align: center;
+      max-width: 80%;
+      flex-basis: 80%;
+      margin-bottom: 30px;
+    }
+    &__logo {
+      justify-content: center;
+    }
+    &__address {
+      text-align: center;
+      max-width: 80%;
+      flex-basis: 80%;
+      margin-bottom: 30px;
+      &-item {
+        justify-content: center;
+      }
+    }
+    &__social {
+      text-align: center;
+      max-width: 80%;
+      flex-basis: 80%;
+      &-input {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+      &-links {
+        justify-content: center;
+      }
+    }
+    &__links {
+      text-align: center;
+      margin-bottom: 20px;
+      float: unset;
+    }
+    &__link {
+      margin: 0px 0px 0px 0px;
+    }
+    &__copyright {
+      text-align: center;
+      float: unset;
     }
   }
 }
